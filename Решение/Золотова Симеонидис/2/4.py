@@ -1,0 +1,12 @@
+from hashlib import sha256 
+once = sha256() 
+once.update(b'message')   
+many = sha256() 
+many.update(b'm')  
+many.update(b'e') 
+many.update(b's') 
+many.update(b's')  
+many.update(b'a') 
+many.update(b'g') 
+many.update(b'e')  
+print (once.digest() == many.digest())
